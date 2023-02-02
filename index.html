@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form valiadtion</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Sign up today!</h1>
+        <!-- form -->
+        <form id="form">
+            <!-- full name -->
+            <div class="form-group">
+                <label for="name">Full name</label>
+                <input type="text" id="name" placeholder="Full name" name="name" required minlength="3" maxlength="30">
+            </div>
+            <!-- phone  -->
+            <div class="form-group">
+                <label for="phone">phone number</label>
+                <input type="tel" id="phone" placeholder="555-555-5555" name="phone" required
+                    pattern="01[0125][0-9]{8}">
+            </div>
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">email address</label>
+                <input type="email" id="email" placeholder="email@address.com" name="email" required>
+            </div>
+            <!-- wensite -->
+            <div class="form-group">
+                <label for="website">website url</label>
+                <input type="URL" id="website" placeholder="http://example.com" name="website" required>
+            </div>
+            <!-- password -->
+            <div class="form-group">
+                <label for="password1">password</label>
+                <input type="password" id="password1" placeholder="create password (min. 8 Characters)" required
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,32}$"
+                    title="1 Uppercase, 1 Lowercase, 1 number, 1 Special character">
+            </div>
+            <!-- confirm pass  -->
+            <div class="form-group">
+                <label for="password2">confirm password</label>
+                <input type="password" id="password2" placeholder="confirm password" name="password" required
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,32}$">
+            </div>
+            <button type="submit">Register</button>
+        </form>
+        <!-- Error / success msg -->
+        <div class="message-container">
+            <h3 id="message">Don't Hesitate!</h3>
+        </div>
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
